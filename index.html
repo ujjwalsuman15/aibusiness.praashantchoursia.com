@@ -1,0 +1,3942 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Automation Masterclass for Business Owners</title>
+
+    <meta name="description"
+        content="AI Automation Masterclass for Business Owners. Learn AI lead generation, automated follow-up, sales conversion automation, customer retention and AI agents.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* =========================================================
+   ROOT
+========================================================= */
+
+        :root {
+            --black: #050505;
+            --black2: #090909;
+            --black3: #101010;
+
+            --orange: #ff7900;
+            --orange-light: #ff9a2e;
+            --orange-dark: #d95c00;
+
+            --white: #ffffff;
+            --gray: #a5a5a5;
+            --gray2: #707070;
+
+            --border: rgba(255, 255, 255, .10);
+
+            --container-fluid: 1180px;
+        }
+
+        /* =========================================================
+   RESET
+========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--black);
+            color: var(--white);
+
+            font-family: "DM Sans", sans-serif;
+
+            line-height: 1.6;
+
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input,
+        select {
+            font-family: inherit;
+        }
+
+        .container-fluid {
+            width: min(92%, var(--container-fluid));
+            margin: auto;
+        }
+
+        section {
+            position: relative;
+        }
+
+        /* =========================================================
+   GRID BACKGROUND
+========================================================= */
+
+        .grid-bg {
+            position: absolute;
+            inset: 0;
+
+            background-image:
+                linear-gradient(rgba(255, 255, 255, .035) 1px,
+                    transparent 1px),
+                linear-gradient(90deg,
+                    rgba(255, 255, 255, .035) 1px,
+                    transparent 1px);
+
+            background-size: 55px 55px;
+
+            mask-image: linear-gradient(to bottom,
+                    black,
+                    transparent 90%);
+
+            pointer-events: none;
+        }
+
+        /* =========================================================
+   GLOW
+========================================================= */
+
+        .orange-glow {
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            border-radius: 50%;
+
+            background: rgba(255, 121, 0, .12);
+
+            filter: blur(120px);
+
+            pointer-events: none;
+        }
+
+        /* =========================================================
+   BUTTON
+========================================================= */
+
+        .btn {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 10px;
+
+            min-height: 52px;
+
+            padding: 0 26px;
+
+            border-radius: 6px;
+
+            background: var(--orange);
+
+            color: #fff;
+
+            font-weight: 700;
+
+            font-size: 14px;
+
+            border: 1px solid var(--orange);
+
+            transition: .3s ease;
+
+            box-shadow:
+                0 0 30px rgba(255, 121, 0, .12);
+        }
+
+        .btn:hover {
+            background: var(--orange-light);
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 12px 35px rgba(255, 121, 0, .25);
+        }
+
+        .btn-outline {
+            background: transparent;
+
+            border-color: rgba(255, 255, 255, .18);
+
+            color: #fff;
+
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--orange);
+
+            color: var(--orange);
+
+            background: transparent;
+        }
+
+        /* =========================================================
+   HEADER
+========================================================= */
+
+        .header {
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            z-index: 100;
+
+            padding: 22px 0;
+        }
+
+        .header-inner {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: "Manrope", sans-serif;
+
+            font-size: 23px;
+
+            font-weight: 800;
+
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: var(--orange);
+        }
+
+        .header-badge {
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 9px 16px;
+
+            border: 1px solid rgba(255, 255, 255, .12);
+
+            border-radius: 30px;
+
+            background: rgba(255, 255, 255, .025);
+
+            color: #ddd;
+
+            font-size: 12px;
+        }
+
+        .header-badge i {
+            width: 7px;
+            height: 7px;
+
+            border-radius: 50%;
+
+            background: var(--orange);
+
+            box-shadow: 0 0 12px var(--orange);
+        }
+
+        /* =========================================================
+   HERO
+========================================================= */
+
+        .hero {
+            min-height: 780px;
+
+            display: flex;
+
+            align-items: center;
+
+            overflow: hidden;
+
+            padding: 130px 0 70px;
+
+            background:
+                radial-gradient(ellipse at 15% 25%,
+                    rgba(255, 121, 0, .17),
+                    transparent 36%),
+                radial-gradient(ellipse at 85% 75%,
+                    rgba(255, 121, 0, .07),
+                    transparent 35%),
+                #050505;
+        }
+
+        .hero .orange-glow {
+            left: -250px;
+            top: 100px;
+        }
+
+        .hero-content {
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 850px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 7px 12px;
+
+            border: 1px solid rgba(255, 121, 0, .25);
+
+            background: rgba(255, 121, 0, .06);
+
+            color: var(--orange-light);
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            border-radius: 4px;
+
+            margin-bottom: 25px;
+        }
+
+        .eyebrow::before {
+            content: "";
+
+            width: 6px;
+            height: 6px;
+
+            border-radius: 50%;
+
+            background: var(--orange);
+
+            box-shadow: 0 0 10px var(--orange);
+        }
+
+        .hero h1 {
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(46px, 6.3vw, 55px);
+
+            font-weight: 800;
+
+            line-height: .98;
+
+            letter-spacing: -4px;
+
+            max-width: 900px;
+
+            margin-bottom: 30px;
+        }
+
+        .hero h1 .orange {
+            color: var(--orange);
+        }
+
+        .hero-description {
+            max-width: 720px;
+
+            color: #a7a7a7;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 13px;
+        }
+
+        .hero-meta {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-top: 28px;
+        }
+
+        .meta-pill {
+            padding: 9px 14px;
+
+            border: 1px solid rgba(255, 255, 255, .09);
+
+            background: rgba(255, 255, 255, .025);
+
+            border-radius: 30px;
+
+            color: #9a9a9a;
+
+            font-size: 11px;
+        }
+
+        /* =========================================================
+   HERO VISUAL WAVE
+========================================================= */
+
+        .hero-wave {
+            position: absolute;
+
+            right: -5%;
+
+            bottom: -20px;
+
+            width: 65%;
+
+            height: 340px;
+
+            opacity: .7;
+
+            transform: rotate(-4deg);
+
+            pointer-events: none;
+        }
+
+        .wave-line {
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+
+            border-top: 1px solid rgba(255, 121, 0, .25);
+
+            border-radius: 50%;
+
+            transform: translateY(var(--y)) rotate(var(--r));
+
+            box-shadow:
+                0 0 20px rgba(255, 121, 0, .04);
+        }
+
+        .wave-line:nth-child(1) {
+            --y: 0px;
+            --r: 2deg;
+        }
+
+        .wave-line:nth-child(2) {
+            --y: 25px;
+            --r: 1deg;
+        }
+
+        .wave-line:nth-child(3) {
+            --y: 50px;
+            --r: 0deg;
+        }
+
+        .wave-line:nth-child(4) {
+            --y: 75px;
+            --r: -1deg;
+        }
+
+        .wave-line:nth-child(5) {
+            --y: 100px;
+            --r: -2deg;
+        }
+
+        .wave-line:nth-child(6) {
+            --y: 125px;
+            --r: -3deg;
+        }
+
+        .wave-line:nth-child(7) {
+            --y: 150px;
+            --r: -4deg;
+        }
+
+        /* =========================================================
+   SIDE LABEL
+========================================================= */
+
+        .side-label {
+            position: absolute;
+
+            right: 0;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            writing-mode: vertical-rl;
+
+            padding: 18px 10px;
+
+            background: var(--orange);
+
+            color: #fff;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+        }
+
+        /* =========================================================
+   STATS
+========================================================= */
+
+        .stats {
+            padding: 30px 0;
+
+            border-top: 1px solid var(--border);
+
+            border-bottom: 1px solid var(--border);
+
+            background: #070707;
+        }
+
+        .stats-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .stat {
+            padding: 10px 20px;
+
+            border-right: 1px solid var(--border);
+
+            text-align: center;
+        }
+
+        .stat:last-child {
+            border-right: 0;
+        }
+
+        .stat strong {
+            display: block;
+
+            font-family: "Manrope", sans-serif;
+
+            color: var(--orange);
+
+            font-size: 25px;
+
+            margin-bottom: 3px;
+        }
+
+        .stat span {
+            color: #ffffff;
+
+            font-size: 12px;
+        }
+
+        /* =========================================================
+   SECTION COMMON
+========================================================= */
+
+        .section {
+            padding: 50px 0;
+        }
+
+        .section-head {
+            max-width: 760px;
+
+            margin: 0 auto 60px;
+
+            text-align: center;
+        }
+
+        .section-kicker {
+            color: var(--orange);
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+
+            font-weight: 700;
+
+            margin-bottom: 15px;
+        }
+
+        .section-head h2 {
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(34px, 4.5vw, 56px);
+
+            line-height: 1.05;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 18px;
+        }
+
+        .section-head p {
+            color: #bbbbbb;
+
+            font-size: 16px;
+        }
+
+        /* =========================================================
+   PROBLEM
+========================================================= */
+
+        .problem {
+            background: #080808;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .problem-grid {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 1px;
+
+            background: var(--border);
+
+            border: 1px solid var(--border);
+        }
+
+        .problem-card {
+            padding: 35px 28px;
+
+            background: #080808;
+
+            min-height: 230px;
+        }
+
+        .problem-icon {
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid rgba(255, 121, 0, .25);
+
+            color: var(--orange);
+
+            margin-bottom: 25px;
+
+            font-size: 20px;
+        }
+
+        .problem-card h3 {
+            font-family: "Manrope", sans-serif;
+
+            font-size: 18px;
+
+            margin-bottom: 10px;
+        }
+
+        .problem-card p {
+            color: #bbbbbb;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+        /* =========================================================
+   LEARNING
+========================================================= */
+
+        .learn-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .learn-card {
+            position: relative;
+
+            min-height: 310px;
+
+            padding: 30px;
+
+            background:
+                linear-gradient(145deg,
+                    #111,
+                    #080808);
+
+            border: 1px solid var(--border);
+
+            overflow: hidden;
+
+            transition: .3s;
+        }
+
+        .learn-card:hover {
+            border-color: rgba(255, 121, 0, .4);
+
+            transform: translateY(-5px);
+        }
+
+        .learn-number {
+            position: absolute;
+
+            top: 15px;
+            right: 20px;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 55px;
+
+            font-weight: 800;
+
+            color: rgba(255, 255, 255, .035);
+        }
+
+        .learn-icon {
+            width: 54px;
+            height: 54px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(255, 121, 0, .08);
+
+            border: 1px solid rgba(255, 121, 0, .2);
+
+            color: var(--orange);
+
+            font-size: 23px;
+
+            margin-bottom: 25px;
+        }
+
+        .learn-card h3 {
+            font-family: "Manrope", sans-serif;
+
+            font-size: 20px;
+
+            margin-bottom: 12px;
+
+            max-width: 270px;
+        }
+
+        .learn-card p {
+            color: #bbbbbb;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+        /* =========================================================
+   TRANSFORMATION
+========================================================= */
+
+        .transformation {
+            background: #080808;
+
+            overflow: hidden;
+        }
+
+        .transform-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 120px 1fr;
+
+            align-items: center;
+
+            gap: 30px;
+        }
+
+        .transform-box {
+            padding: 40px;
+
+            border: 1px solid var(--border);
+
+            background: #0c0c0c;
+        }
+
+        .transform-box h3 {
+            font-family: "Manrope", sans-serif;
+
+            font-size: 24px;
+
+            margin-bottom: 25px;
+        }
+
+        .transform-box.before h3 {
+            color: #bbbbbb;
+        }
+
+        .transform-box.after {
+            border-color: rgba(255, 121, 0, .25);
+        }
+
+        .transform-box.after h3 {
+            color: var(--orange);
+        }
+
+        .transform-list {
+            list-style: none;
+        }
+
+        .transform-list li {
+            padding: 12px 0;
+
+            border-bottom: 1px solid rgba(255, 255, 255, .06);
+
+            color: #ffffff;
+
+            font-size: 14px;
+        }
+
+        .transform-list li:last-child {
+            border-bottom: 0;
+        }
+
+        .before li::before {
+            content: "×";
+
+            color: #666;
+
+            margin-right: 12px;
+
+            font-weight: 800;
+        }
+
+        .after li::before {
+            content: "✓";
+
+            color: var(--orange);
+
+            margin-right: 12px;
+
+            font-weight: 800;
+        }
+
+        .transform-arrow {
+            width: 80px;
+            height: 80px;
+
+            margin: auto;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background: var(--orange);
+
+            font-size: 25px;
+
+            box-shadow: 0 0 40px rgba(255, 121, 0, .15);
+        }
+
+        /* =========================================================
+   BONUS
+========================================================= */
+
+        .bonus {
+            background: #050505;
+        }
+
+        .bonus-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 14px;
+        }
+
+        .bonus-card {
+            display: flex;
+
+            gap: 18px;
+
+            padding: 25px;
+
+            background: #0c0c0c;
+
+            border: 1px solid var(--border);
+
+            transition: .3s;
+        }
+
+        .bonus-card:hover {
+            border-color: rgba(255, 121, 0, .3);
+        }
+
+        .bonus-number {
+            flex-shrink: 0;
+
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background: var(--orange);
+
+            color: #fff;
+
+            font-size: 12px;
+
+            font-weight: 800;
+        }
+
+        .bonus-card h3 {
+            font-family: "Manrope", sans-serif;
+
+            font-size: 16px;
+
+            margin-bottom: 6px;
+        }
+
+        .bonus-card p {
+            color: #bbbbbb;
+
+            font-size: 12px;
+
+            line-height: 1.6;
+        }
+
+        .featured-bonus {
+            grid-column: 1/-1;
+
+            padding: 35px;
+
+            border: 1px solid rgba(255, 121, 0, .4);
+
+            background:
+                radial-gradient(circle at 80% 50%,
+                    rgba(255, 121, 0, .12),
+                    transparent 40%),
+                #0d0d0d;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+        .featured-bonus .bonus-number {
+            width: 62px;
+            height: 62px;
+
+            font-size: 13px;
+        }
+
+        .featured-bonus h3 {
+            font-size: 24px;
+
+            color: var(--orange-light);
+        }
+
+        /* =========================================================
+   AUDIENCE
+========================================================= */
+
+        .audience {
+            background: #080808;
+        }
+
+        .audience-grid {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            max-width: 900px;
+
+            margin: auto;
+        }
+
+        .audience-pill {
+            padding: 14px 20px;
+
+            border: 1px solid var(--border);
+
+            background: #0d0d0d;
+
+            color: #bbbbbb;
+
+            font-size: 13px;
+
+            transition: .3s;
+        }
+
+        .audience-pill:hover {
+            color: #fff;
+
+            border-color: rgba(255, 121, 0, .35);
+        }
+
+        /* =========================================================
+   NO CODE
+========================================================= */
+
+        .no-code-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+
+            max-width: 950px;
+
+            margin: auto;
+        }
+
+        .no-code-card {
+            padding: 40px 25px;
+
+            text-align: center;
+
+            border: 1px solid var(--border);
+
+            background: #0b0b0b;
+        }
+
+        .no-code-icon {
+            font-size: 35px;
+
+            margin-bottom: 20px;
+        }
+
+        .no-code-card h3 {
+            font-family: "Manrope", sans-serif;
+
+            font-size: 19px;
+        }
+
+        /* =========================================================
+   CTA / FORM
+========================================================= */
+
+        .register {
+            padding: 120px 0;
+
+            background:
+                radial-gradient(circle at 15% 50%,
+                    rgba(255, 121, 0, .12),
+                    transparent 30%),
+                #050505;
+        }
+
+        .register-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 430px;
+
+            gap: 80px;
+
+            align-items: center;
+        }
+
+        .register-copy h2 {
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(38px, 5vw, 62px);
+
+            line-height: 1;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 22px;
+        }
+
+        .register-copy h2 span {
+            color: var(--orange);
+        }
+
+        .register-copy p {
+            color: #bbbbbb;
+
+            max-width: 600px;
+
+            font-size: 16px;
+
+            margin-bottom: 30px;
+        }
+
+        .register-points {
+            list-style: none;
+        }
+
+        .register-points li {
+            margin: 13px 0;
+
+            color: #bbbbbb;
+
+            font-size: 14px;
+        }
+
+        .register-points li::before {
+            content: "✓";
+
+            color: var(--orange);
+
+            margin-right: 10px;
+        }
+
+        .form-box {
+            padding: 32px;
+
+            background: #0d0d0d;
+
+            border: 1px solid rgba(255, 121, 0, .22);
+
+            box-shadow:
+                0 30px 100px rgba(0, 0, 0, .4);
+        }
+
+        .form-box h3 {
+            font-family: "Manrope", sans-serif;
+
+            font-size: 25px;
+
+            margin-bottom: 8px;
+        }
+
+        .form-box>p {
+            color: #707070;
+
+            font-size: 12px;
+
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+
+            color: #bbbbbb;
+
+            font-size: 11px;
+
+            margin-bottom: 7px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+
+            height: 48px;
+
+            padding: 0 14px;
+
+            border: 1px solid rgba(255, 255, 255, .1);
+
+            background: #070707;
+
+            color: #fff;
+
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: var(--orange);
+        }
+
+        .form-submit {
+            width: 100%;
+
+            height: 52px;
+
+            border: 0;
+
+            background: var(--orange);
+
+            color: #fff;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            margin-top: 5px;
+
+            transition: .3s;
+        }
+
+        .form-submit:hover {
+            background: var(--orange-light);
+        }
+
+        .form-note {
+            text-align: center;
+
+            color: #555;
+
+            font-size: 10px;
+
+            margin-top: 13px;
+        }
+
+        /* =========================================================
+   FAQ
+========================================================= */
+
+        .faq {
+            max-width: 850px;
+
+            margin: auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq-question {
+            width: 100%;
+
+            padding: 23px 5px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background: none;
+
+            color: #fff;
+
+            border: 0;
+
+            cursor: pointer;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            text-align: left;
+        }
+
+        .faq-question span {
+            color: var(--orange);
+
+            font-size: 20px;
+
+            transition: .3s;
+        }
+
+        .faq-answer {
+            max-height: 0;
+
+            overflow: hidden;
+
+            transition: .35s ease;
+        }
+
+        .faq-answer p {
+            padding: 0 5px 22px;
+
+            color: #bbbbbb;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-question span {
+            transform: rotate(45deg);
+        }
+
+        /* =========================================================
+   FINAL CTA
+========================================================= */
+
+        .final-cta {
+            padding: 100px 0;
+
+            text-align: center;
+
+            border-top: 1px solid var(--border);
+
+            background:
+                radial-gradient(ellipse at center,
+                    rgba(255, 121, 0, .13),
+                    transparent 55%),
+                #060606;
+        }
+
+        .final-cta h2 {
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(40px, 6vw, 70px);
+
+            line-height: 1;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 20px;
+        }
+
+        .final-cta h2 span {
+            color: var(--orange);
+        }
+
+        .final-cta p {
+            max-width: 650px;
+
+            margin: 0 auto 30px;
+
+            color: #bbbbbb;
+        }
+
+        /* =========================================================
+   FOOTER
+========================================================= */
+
+        .footer {
+            padding: 25px 0;
+
+            border-top: 1px solid var(--border);
+
+            text-align: center;
+
+            color: #555;
+
+            font-size: 11px;
+        }
+
+        /* =========================================================
+   MOBILE
+========================================================= */
+
+        @media(max-width:1000px) {
+
+            .hero {
+                min-height: 700px;
+            }
+
+            .hero h1 {
+                font-size: clamp(43px, 7vw, 68px);
+            }
+
+            .problem-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .learn-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .register-grid {
+                grid-template-columns: 1fr;
+
+                gap: 50px;
+            }
+
+            .register-copy {
+                text-align: center;
+            }
+
+            .register-points {
+                display: inline-block;
+
+                text-align: left;
+            }
+
+        }
+
+        @media(max-width:700px) {
+
+            .container-fluid {
+                width: 90%;
+            }
+
+            .header {
+                padding: 18px 0;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .header-badge {
+                font-size: 10px;
+
+                padding: 8px 11px;
+            }
+
+            .hero {
+                min-height: auto;
+
+                padding: 125px 0 80px;
+
+                text-align: left;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+
+                letter-spacing: -2px;
+            }
+
+            .hero-description {
+                font-size: 15px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+            }
+
+            .hero-wave {
+                width: 100%;
+
+                opacity: .4;
+            }
+
+            .side-label {
+                display: none;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+
+                gap: 0;
+            }
+
+            .stat {
+                border-right: 0;
+
+                border-bottom: 1px solid var(--border);
+
+                padding: 18px;
+            }
+
+            .stat:last-child {
+                border-bottom: 0;
+            }
+
+            .section {
+                padding: 45px 0;
+            }
+
+            .section-head {
+                margin-bottom: 40px;
+            }
+
+            .section-head h2 {
+                font-size: 35px;
+            }
+
+            .problem-grid,
+            .learn-grid,
+            .bonus-grid,
+            .no-code-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .transform-grid {
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+            }
+
+            .transform-arrow {
+                transform: rotate(90deg);
+            }
+
+            .featured-bonus {
+                grid-column: auto;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+            .register {
+                padding: 75px 0;
+            }
+
+            .register-copy {
+                text-align: left;
+            }
+
+            .form-box {
+                padding: 24px;
+            }
+
+            .final-cta {
+                padding: 75px 0;
+            }
+
+            .final-cta h2 {
+                font-size: 43px;
+
+                letter-spacing: -2px;
+            }
+
+        }
+
+        @media(max-width:400px) {
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .header-badge {
+                display: none;
+            }
+
+            .section-head h2 {
+                font-size: 31px;
+            }
+
+        }
+
+
+        /* =========================================================
+           HERO LAPTOP VISUAL
+        ========================================================= */
+        .hero-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.02fr) minmax(390px, .78fr);
+            align-items: center;
+            gap: 58px;
+            width: 100%;
+        }
+
+        .hero-visual {
+            position: relative;
+            width: 100%;
+            max-width: 620px;
+            margin-left: auto;
+            z-index: 2;
+            perspective: 1200px;
+        }
+
+        .laptop {
+            position: relative;
+            width: 100%;
+            transform: rotateY(-5deg) rotateX(2deg);
+            filter: drop-shadow(0 35px 60px rgba(0, 0, 0, .55));
+        }
+
+        .laptop-screen {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            padding: 9px;
+            border: 2px solid #242424;
+            border-bottom: 0;
+            border-radius: 18px 18px 7px 7px;
+            background: #151515;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .04);
+        }
+
+        .laptop-camera {
+            position: absolute;
+            top: 4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #4a4a4a;
+            z-index: 5;
+        }
+
+        .screen-ui {
+            min-height: 330px;
+            border-radius: 10px 10px 3px 3px;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 85% 10%, rgba(255, 121, 0, .15), transparent 30%),
+                #090909;
+            border: 1px solid rgba(255, 255, 255, .07);
+        }
+
+        .screen-topbar {
+            height: 34px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 0 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, .07);
+            background: #101010;
+        }
+
+        .screen-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #555;
+        }
+
+        .screen-brand {
+            margin-left: 7px;
+            color: #bbbbbb;
+            font-size: 8px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .screen-body {
+            display: grid;
+            grid-template-columns: 72px 1fr;
+            min-height: 296px;
+        }
+
+        .screen-sidebar {
+            padding: 14px 9px;
+            border-right: 1px solid rgba(255, 255, 255, .06);
+            background: #0c0c0c;
+        }
+
+        .side-mini {
+            height: 8px;
+            margin-bottom: 14px;
+            border-radius: 3px;
+            background: #252525;
+        }
+
+        .side-mini.active {
+            width: 75%;
+            background: var(--orange);
+            box-shadow: 0 0 12px rgba(255, 121, 0, .25);
+        }
+
+        .dashboard {
+            padding: 17px;
+        }
+
+        .dashboard-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 13px;
+        }
+
+        .dashboard-title strong {
+            font-family: "Manrope", sans-serif;
+            font-size: 15px;
+        }
+
+        .live-badge {
+            padding: 4px 7px;
+            border: 1px solid rgba(255, 121, 0, .25);
+            color: var(--orange-light);
+            background: rgba(255, 121, 0, .07);
+            border-radius: 4px;
+            font-size: 7px;
+            font-weight: 800;
+        }
+
+        .metric-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-bottom: 11px;
+        }
+
+        .metric {
+            padding: 10px;
+            border: 1px solid rgba(255, 255, 255, .07);
+            border-radius: 6px;
+            background: #101010;
+        }
+
+        .metric span {
+            display: block;
+            color: #ffffff;
+            font-size: 7px;
+            margin-bottom: 4px;
+        }
+
+        .metric strong {
+            font-family: "Manrope", sans-serif;
+            font-size: 13px;
+        }
+
+        .metric strong.orange-text {
+            color: var(--orange);
+        }
+
+        .automation-panel {
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 9px;
+        }
+
+        .flow-card,
+        .activity-card {
+            padding: 11px;
+            border: 1px solid rgba(255, 255, 255, .07);
+            border-radius: 7px;
+            background: #101010;
+        }
+
+        .ui-label {
+            display: block;
+            margin-bottom: 9px;
+            color: #bbbbbb;
+            font-size: 7px;
+            letter-spacing: .8px;
+            font-weight: 700;
+        }
+
+        .flow-step {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            margin-bottom: 8px;
+            padding: 7px;
+            border-radius: 5px;
+            background: #151515;
+            color: #ffffff;
+            font-size: 7px;
+        }
+
+        .flow-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .flow-icon {
+            width: 17px;
+            height: 17px;
+            flex-shrink: 0;
+            display: grid;
+            place-items: center;
+            border-radius: 4px;
+            color: #fff;
+            background: var(--orange);
+            font-size: 7px;
+            font-weight: 800;
+        }
+
+        .activity-line {
+            height: 7px;
+            margin: 8px 0;
+            border-radius: 3px;
+            background: #222;
+        }
+
+        .activity-line.short {
+            width: 65%;
+        }
+
+        .activity-line.orange {
+            width: 82%;
+            background: linear-gradient(90deg, var(--orange), #ff9a2e);
+        }
+
+        .laptop-base {
+            position: relative;
+            width: 100%;
+            height: 17px;
+            margin-top: -1px;
+            background: linear-gradient(#363636, #181818);
+            border-radius: 2px 2px 18px 18px;
+            box-shadow: 0 8px 0 -3px #090909;
+        }
+
+        .laptop-notch {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            width: 22%;
+            height: 5px;
+            border-radius: 0 0 7px 7px;
+            background: #202020;
+        }
+
+        .visual-glow {
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            right: 3%;
+            top: 16%;
+            border-radius: 50%;
+            background: rgba(255, 121, 0, .14);
+            filter: blur(65px);
+            z-index: -1;
+        }
+
+        /* Slightly larger supporting text across lower sections */
+        .section-head p {
+            font-size: 17px;
+        }
+
+        .problem-card p,
+        .learn-card p,
+        .bonus-card p {
+            font-size: 14px;
+        }
+
+        .audience-pill {
+            font-size: 14px;
+        }
+
+        .no-code-card p {
+            font-size: 14px;
+        }
+
+        .transform-list li {
+            font-size: 15px;
+        }
+
+        .register-copy p {
+            font-size: 17px;
+        }
+
+        .register-points li {
+            font-size: 15px;
+        }
+
+        .faq-answer p {
+            font-size: 14px;
+        }
+
+        @media(max-width:1199px) {
+            .hero-layout {
+                grid-template-columns: minmax(0, 1fr) minmax(350px, .72fr);
+                gap: 35px;
+            }
+
+            .hero-visual {
+                max-width: 500px;
+            }
+
+            .screen-ui {
+                min-height: 285px;
+            }
+
+            .screen-body {
+                min-height: 251px;
+            }
+        }
+
+        @media(max-width:900px) {
+            .hero-layout {
+                grid-template-columns: 1fr;
+                gap: 38px;
+            }
+
+            .hero-content {
+                text-align: left;
+            }
+
+            .hero-visual {
+                max-width: 680px;
+                margin: 0 auto;
+            }
+
+            .screen-ui {
+                min-height: 320px;
+            }
+
+            .screen-body {
+                min-height: 286px;
+            }
+        }
+
+        @media(max-width:700px) {
+            .hero-layout {
+                gap: 30px;
+            }
+
+            .hero-visual {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .laptop {
+                transform: none;
+            }
+
+            .laptop-screen {
+                width: 96%;
+                padding: 6px;
+                border-radius: 12px 12px 5px 5px;
+            }
+
+            .screen-ui {
+                min-height: 235px;
+            }
+
+            .screen-body {
+                grid-template-columns: 45px 1fr;
+                min-height: 202px;
+            }
+
+            .screen-sidebar {
+                padding: 10px 6px;
+            }
+
+            .side-mini {
+                margin-bottom: 10px;
+                height: 6px;
+            }
+
+            .dashboard {
+                padding: 10px;
+            }
+
+            .dashboard-title strong {
+                font-size: 11px;
+            }
+
+            .metric-row {
+                gap: 5px;
+            }
+
+            .metric {
+                padding: 7px;
+            }
+
+            .metric span {
+                font-size: 6px;
+            }
+
+            .metric strong {
+                font-size: 10px;
+            }
+
+            .automation-panel {
+                gap: 5px;
+            }
+
+            .flow-card,
+            .activity-card {
+                padding: 7px;
+            }
+
+            .flow-step {
+                padding: 5px;
+                font-size: 6px;
+                gap: 5px;
+            }
+
+            .flow-icon {
+                width: 14px;
+                height: 14px;
+                font-size: 6px;
+            }
+
+            .ui-label {
+                font-size: 6px;
+            }
+
+            .activity-line {
+                margin: 6px 0;
+            }
+
+            .laptop-base {
+                height: 12px;
+                border-radius: 2px 2px 12px 12px;
+            }
+
+            .section-head p,
+            .register-copy p {
+                font-size: 15px;
+            }
+
+            .problem-card p,
+            .learn-card p,
+            .bonus-card p,
+            .no-code-card p {
+                font-size: 14px;
+            }
+
+            .transform-list li,
+            .register-points li {
+                font-size: 14px;
+            }
+
+            .audience-pill {
+                font-size: 13px;
+            }
+        }
+
+        @media(max-width:380px) {
+            .screen-ui {
+                min-height: 205px;
+            }
+
+            .screen-body {
+                min-height: 172px;
+            }
+
+            .dashboard-title {
+                margin-bottom: 8px;
+            }
+
+            .metric {
+                padding: 5px;
+            }
+
+            .metric strong {
+                font-size: 9px;
+            }
+
+            .flow-step {
+                font-size: 5.5px;
+            }
+
+            .hero-visual {
+                margin-top: 2px;
+            }
+        }
+
+        /* =========================================================
+   FINAL RESPONSIVE / SIZE FIXES
+   ========================================================= */
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto
+        }
+
+        .container-fluid {
+            width: min(92%, 1580px);
+            max-width: 1580px
+        }
+
+        .logo {
+            width: auto;
+            display: flex;
+            align-items: center;
+            line-height: 0;
+            flex-shrink: 0
+        }
+
+        .logo-img {
+            width: 155px !important;
+            height: auto !important;
+            max-height: 48px;
+            object-fit: contain;
+            object-position: left center
+        }
+
+        .header-inner {
+            min-height: 48px;
+            gap: 20px
+        }
+
+        .header-badge {
+            white-space: nowrap;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 900px
+        }
+
+        .hero h1 {
+            max-width: 900px;
+            text-wrap: balance
+        }
+
+        .hero-description {
+            max-width: 700px
+        }
+
+        .hero-wave {
+            max-width: 760px
+        }
+
+        .problem-card,
+        .learn-card,
+        .bonus-card,
+        .no-code-card,
+        .transform-box,
+        .form-box {
+            min-width: 0
+        }
+
+        .learn-card p,
+        .bonus-card p,
+        .problem-card p {
+            overflow-wrap: anywhere
+        }
+
+        .bonus-grid {
+            align-items: stretch
+        }
+
+        .bonus-card {
+            height: 100%
+        }
+
+        .featured-bonus {
+            display: none !important
+        }
+
+        .form-box {
+            width: 100%;
+            max-width: 430px;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .form-group input,
+        .form-group select {
+            max-width: 100%;
+            min-width: 0
+        }
+
+        button,
+        .btn {
+            touch-action: manipulation
+        }
+
+        @media(max-width:1199px) {
+            .container-fluid {
+                width: min(92%, 1080px)
+            }
+
+            .hero {
+                min-height: 720px
+            }
+
+            .hero h1 {
+                font-size: clamp(44px, 6.4vw, 72px)
+            }
+
+            .hero-wave {
+                width: 60%;
+                opacity: .45
+            }
+
+            .side-label {
+                display: none
+            }
+
+            .learn-card {
+                min-height: 285px
+            }
+
+            .problem-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(max-width:900px) {
+            .container-fluid {
+                width: min(92%, 760px)
+            }
+
+            .header {
+                padding: 18px 0
+            }
+
+            .header-inner {
+                min-height: 42px
+            }
+
+            .logo-img {
+                width: 145px !important;
+                max-height: 42px
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 125px 0 80px
+            }
+
+            .hero-content {
+                max-width: 100%
+            }
+
+            .hero h1 {
+                font-size: clamp(42px, 7.2vw, 62px);
+                letter-spacing: -2.8px
+            }
+
+            .hero-description {
+                font-size: 16px;
+                max-width: 680px
+            }
+
+            .hero-wave {
+                right: -20%;
+                bottom: -50px;
+                width: 85%;
+                height: 280px;
+                opacity: .28
+            }
+
+            .problem-grid,
+            .learn-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr))
+            }
+
+            .learn-card {
+                min-height: 275px
+            }
+
+            .transform-grid {
+                grid-template-columns: 1fr;
+                gap: 18px
+            }
+
+            .transform-arrow {
+                transform: rotate(90deg);
+                margin: auto
+            }
+
+            .bonus-grid {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .register-grid {
+                grid-template-columns: 1fr;
+                gap: 45px
+            }
+
+            .register-copy {
+                text-align: left
+            }
+
+            .form-box {
+                max-width: 620px
+            }
+        }
+
+        @media(max-width:700px) {
+            .container-fluid {
+                width: calc(100% - 32px)
+            }
+
+            .header {
+                padding: 14px 0
+            }
+
+            .header-inner {
+                gap: 12px
+            }
+
+            .logo-img {
+                width: 128px !important;
+                max-height: 38px
+            }
+
+            .header-badge {
+                font-size: 9px;
+                padding: 7px 9px;
+                max-width: 190px
+            }
+
+            .hero {
+                padding: 112px 0 68px
+            }
+
+            .eyebrow {
+                font-size: 9px;
+                letter-spacing: 1.2px;
+                padding: 6px 9px;
+                margin-bottom: 18px
+            }
+
+            .hero h1 {
+                font-size: clamp(37px, 10vw, 50px);
+                line-height: 1.02;
+                letter-spacing: -2px;
+                margin-bottom: 22px
+            }
+
+            .hero-description {
+                font-size: 14.5px;
+                line-height: 1.65;
+                margin-bottom: 25px
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+                min-height: 50px
+            }
+
+            .hero-meta {
+                gap: 7px;
+                margin-top: 20px
+            }
+
+            .meta-pill {
+                font-size: 9px;
+                padding: 7px 9px
+            }
+
+            .hero-wave {
+                display: none
+            }
+
+            .stats {
+                padding: 0
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 0
+            }
+
+            .stat {
+                padding: 16px;
+                border-right: 0;
+                border-bottom: 1px solid var(--border)
+            }
+
+            .stat:last-child {
+                border-bottom: 0
+            }
+
+            .section {
+                padding: 40px 0
+            }
+
+            .section-head {
+                margin-bottom: 36px
+            }
+
+            .section-head h2 {
+                font-size: clamp(30px, 8vw, 38px);
+                letter-spacing: -1.5px
+            }
+
+            .section-head p {
+                font-size: 14px
+            }
+
+            .problem-grid,
+            .learn-grid,
+            .bonus-grid,
+            .no-code-grid {
+                grid-template-columns: 1fr
+            }
+
+            .problem-card {
+                min-height: 0;
+                padding: 27px 22px
+            }
+
+            .learn-card {
+                min-height: 0;
+                padding: 25px;
+            }
+
+            .learn-number {
+                font-size: 46px;
+                top: 10px;
+                right: 14px
+            }
+
+            .learn-icon {
+                width: 48px;
+                height: 48px;
+                font-size: 20px;
+                margin-bottom: 20px
+            }
+
+            .learn-card h3 {
+                font-size: 18px;
+                max-width: 230px
+            }
+
+            .learn-card p {
+                font-size: 12.5px
+            }
+
+            .transform-box {
+                padding: 28px 22px
+            }
+
+            .transform-box h3 {
+                font-size: 22px
+            }
+
+            .bonus-card {
+                padding: 22px;
+                gap: 13px
+            }
+
+            .bonus-number {
+                width: 42px;
+                height: 42px;
+                font-size: 11px
+            }
+
+            .bonus-card h3 {
+                font-size: 15px
+            }
+
+            .bonus-card p {
+                font-size: 12px
+            }
+
+            .audience-grid {
+                gap: 7px
+            }
+
+            .audience-pill {
+                padding: 10px 12px;
+                font-size: 11px
+            }
+
+            .no-code-card {
+                padding: 30px 20px
+            }
+
+            .register {
+                padding: 70px 0
+            }
+
+            .register-copy h2 {
+                font-size: clamp(35px, 9vw, 48px);
+                letter-spacing: -1.5px
+            }
+
+            .register-copy p {
+                font-size: 14px
+            }
+
+            .form-box {
+                padding: 22px;
+                max-width: none
+            }
+
+            .form-box h3 {
+                font-size: 22px
+            }
+
+            .form-group {
+                margin-bottom: 13px
+            }
+
+            .form-group input,
+            .form-group select {
+                height: 47px;
+                font-size: 14px
+            }
+
+            .final-cta {
+                padding: 70px 0
+            }
+
+            .final-cta h2 {
+                font-size: clamp(35px, 9vw, 48px);
+                letter-spacing: -1.5px
+            }
+
+            .footer {
+                font-size: 10px;
+                padding: 22px 12px
+            }
+        }
+
+        @media(max-width:380px) {
+            .container-fluid {
+                width: calc(100% - 24px)
+            }
+
+            .logo-img {
+                width: 112px !important;
+                max-height: 34px
+            }
+
+            .header-badge {
+                max-width: 150px;
+                font-size: 8px
+            }
+
+            .hero {
+                padding-top: 105px
+            }
+
+            .hero h1 {
+                font-size: 35px;
+                letter-spacing: -1.6px
+            }
+
+            .hero-description {
+                font-size: 13.5px
+            }
+
+            .meta-pill {
+                width: 100%;
+                text-align: center
+            }
+
+            .section {
+                padding: 30px 0
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- =====================================================
+     HEADER
+===================================================== -->
+
+    <header class="header">
+
+        <div class="container-fluid header-inner">
+
+            <div class="logo">
+                <img class="logo-img"
+                    src="https://myappz-v2.b-cdn.net/agency/456b6107-9162-4ee5-b2b5-f35c9cb9bd88/sub/535f6b08-5464-450c-8a7c-2cc9da9b3274/uploads/02e28e98-f249-474b-8656-e07734c362bd.png"
+                    alt="AI Automation Masterclass">
+            </div>
+
+            <div class="header-badge">
+                <i></i>
+                MASTERCLASS FOR BUSINESS OWNERS
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+     HERO
+===================================================== -->
+
+    <section class="hero">
+
+        <div class="grid-bg"></div>
+
+        <div class="orange-glow"></div>
+
+        <div class="container-fluid">
+
+            <div class="hero-layout">
+
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+                        AI AUTOMATION MASTERCLASS
+                    </div>
+
+                    <h1>
+                        Stop Running Your Business
+                        <span class="orange">Manually.</span>
+                        <br>
+                        Start Building a Business That Runs on
+                        <span class="orange">Systems.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Learn how AI and automation can help you generate leads,
+                        automate follow-ups, improve sales, retain customers and
+                        reduce your dependency on manual work.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#register" class="btn">
+                            RESERVE MY SEAT
+                            →
+                        </a>
+
+                        <a href="#learn" class="btn btn-outline">
+                            SEE WHAT YOU'LL LEARN
+                        </a>
+
+                    </div>
+
+                    <div class="hero-meta">
+
+                        <div class="meta-pill">
+                            ✓ No Coding Required
+                        </div>
+
+                        <div class="meta-pill">
+                            ✓ No Technical Skills
+                        </div>
+
+                        <div class="meta-pill">
+                            ✓ Business Owners Only
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-visual" aria-label="AI automation business dashboard preview">
+                    <div class="visual-glow"></div>
+                    <div class="laptop">
+                        <div class="laptop-screen">
+                            <div class="laptop-camera"></div>
+                            <div class="screen-ui">
+                                <div class="screen-topbar">
+                                    <span class="screen-dot"></span>
+                                    <span class="screen-dot"></span>
+                                    <span class="screen-dot"></span>
+                                    <span class="screen-brand">AI AUTOMATION OS</span>
+                                </div>
+                                <div class="screen-body">
+                                    <aside class="screen-sidebar">
+                                        <div class="side-mini active"></div>
+                                        <div class="side-mini"></div>
+                                        <div class="side-mini"></div>
+                                        <div class="side-mini"></div>
+                                        <div class="side-mini"></div>
+                                    </aside>
+                                    <div class="dashboard">
+                                        <div class="dashboard-title">
+                                            <strong>Business Automation</strong>
+                                            <span class="live-badge">● LIVE</span>
+                                        </div>
+
+                                        <div class="metric-row">
+                                            <div class="metric">
+                                                <span>NEW LEADS</span>
+                                                <strong class="orange-text">248</strong>
+                                            </div>
+                                            <div class="metric">
+                                                <span>FOLLOW-UPS</span>
+                                                <strong>184</strong>
+                                            </div>
+                                            <div class="metric">
+                                                <span>CONVERSIONS</span>
+                                                <strong>64</strong>
+                                            </div>
+                                        </div>
+
+                                        <div class="automation-panel">
+                                            <div class="flow-card">
+                                                <span class="ui-label">AUTOMATED LEAD FLOW</span>
+                                                <div class="flow-step">
+                                                    <span class="flow-icon">1</span>
+                                                    New enquiry captured
+                                                </div>
+                                                <div class="flow-step">
+                                                    <span class="flow-icon">2</span>
+                                                    AI follow-up sent
+                                                </div>
+                                                <div class="flow-step">
+                                                    <span class="flow-icon">3</span>
+                                                    Sales task created
+                                                </div>
+                                                <div class="flow-step">
+                                                    <span class="flow-icon">4</span>
+                                                    Customer retained
+                                                </div>
+                                            </div>
+
+                                            <div class="activity-card">
+                                                <span class="ui-label">SYSTEM ACTIVITY</span>
+                                                <div class="activity-line orange"></div>
+                                                <div class="activity-line"></div>
+                                                <div class="activity-line short"></div>
+                                                <div class="activity-line orange"></div>
+                                                <div class="activity-line"></div>
+                                                <div class="activity-line short"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="laptop-base">
+                            <span class="laptop-notch"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-wave">
+
+            <div class="wave-line"></div>
+            <div class="wave-line"></div>
+            <div class="wave-line"></div>
+            <div class="wave-line"></div>
+            <div class="wave-line"></div>
+            <div class="wave-line"></div>
+            <div class="wave-line"></div>
+
+        </div>
+
+        <div class="side-label">
+            AI AUTOMATION • SMART BUSINESS • SYSTEMS
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     STATS
+===================================================== -->
+
+    <section class="stats">
+
+        <div class="container-fluid stats-grid">
+
+            <div class="stat">
+
+                <strong>AI</strong>
+
+                <span>Lead Generation Systems</span>
+
+            </div>
+
+            <div class="stat">
+
+                <strong>AUTOMATE</strong>
+
+                <span>Follow-Up & Sales Processes</span>
+
+            </div>
+
+            <div class="stat">
+
+                <strong>SYSTEMS</strong>
+
+                <span>Built for Business Owners</span>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- =====================================================
+     PROBLEM
+===================================================== -->
+
+    <section class="section problem">
+
+        <div class="container-fluid">
+
+            <div class="section-head">
+
+                <div class="section-kicker">
+                    THE PROBLEM
+                </div>
+
+                <h2>
+                    Is Your Business Still Running on Manual Work?
+                </h2>
+
+                <p>
+                    If every lead, follow-up and decision still depends on you,
+                    your business may be operating on effort instead of systems.
+                </p>
+
+            </div>
+
+
+            <div class="problem-grid">
+
+                <div class="problem-card">
+
+                    <div class="problem-icon">01</div>
+
+                    <h3>
+                        Missed Leads
+                    </h3>
+
+                    <p>
+                        Potential customers come in, but opportunities can get lost
+                        when follow-up depends entirely on people.
+                    </p>
+
+                </div>
+
+
+                <div class="problem-card">
+
+                    <div class="problem-icon">02</div>
+
+                    <h3>
+                        Manual Follow-Up
+                    </h3>
+
+                    <p>
+                        Your team repeatedly performs the same follow-up tasks
+                        instead of using systematic workflows.
+                    </p>
+
+                </div>
+
+
+                <div class="problem-card">
+
+                    <div class="problem-icon">03</div>
+
+                    <h3>
+                        Repetitive Work
+                    </h3>
+
+                    <p>
+                        Too much valuable time goes into tasks that can potentially
+                        be structured and automated.
+                    </p>
+
+                </div>
+
+
+                <div class="problem-card">
+
+                    <div class="problem-icon">04</div>
+
+                    <h3>
+                        Owner Dependency
+                    </h3>
+
+                    <p>
+                        Every small decision keeps coming back to the business owner.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div style=" margin-inline: auto; text-align: center; margin-top: 30px;">
+                <a href=" #register" class="btn"> RESERVE MY SEAT → </a>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     LEARN
+===================================================== -->
+
+    <section class="section" id="learn">
+
+        <div class="container-fluid">
+
+            <div class="section-head">
+
+                <div class="section-kicker">
+                    WHAT YOU WILL LEARN
+                </div>
+
+                <h2>
+                    Build Systems That Work With Your Business.
+                </h2>
+
+                <p>
+                    Learn practical ways to use AI and automation across
+                    lead generation, sales, service and customer retention.
+                </p>
+
+            </div>
+
+
+            <div class="learn-grid">
+
+
+                <div class="learn-card">
+
+                    <div class="learn-number">
+                        01
+                    </div>
+
+                    <div class="learn-icon">
+                        🎯
+                    </div>
+
+                    <h3>
+                        AI Lead Generation System
+                    </h3>
+
+                    <p>
+                        Learn practical ways to generate and capture more qualified
+                        leads using digital channels and AI-powered systems.
+                    </p>
+
+                </div>
+
+
+                <div class="learn-card">
+
+                    <div class="learn-number">
+                        02
+                    </div>
+
+                    <div class="learn-icon">
+                        ⚡
+                    </div>
+
+                    <h3>
+                        Automatic Lead Follow-Up
+                    </h3>
+
+                    <p>
+                        Discover how to build automated follow-up journeys so
+                        potential customers don't get forgotten.
+                    </p>
+
+                </div>
+
+
+                <div class="learn-card">
+
+                    <div class="learn-number">
+                        03
+                    </div>
+
+                    <div class="learn-icon">
+                        💰
+                    </div>
+
+                    <h3>
+                        Sales Conversion Automation
+                    </h3>
+
+                    <p>
+                        Learn how to structure your sales process and automate
+                        repetitive steps from enquiry to conversion.
+                    </p>
+
+                </div>
+
+
+                <div class="learn-card">
+
+                    <div class="learn-number">
+                        04
+                    </div>
+
+                    <div class="learn-icon">
+                        ♥
+                    </div>
+
+                    <h3>
+                        Customer Retention System
+                    </h3>
+
+                    <p>
+                        Discover how automation can help you stay connected with
+                        existing customers and create systematic follow-up.
+                    </p>
+
+                </div>
+
+
+                <div class="learn-card">
+
+                    <div class="learn-number">
+                        05
+                    </div>
+
+                    <div class="learn-icon">
+                        ↗
+                    </div>
+
+                    <h3>
+                        Reduce Owner Dependency
+                    </h3>
+
+                    <p>
+                        Build systems and processes so your business doesn't depend
+                        on you for every small task.
+                    </p>
+
+                </div>
+
+
+                <div class="learn-card">
+
+                    <div class="learn-number">
+                        06
+                    </div>
+
+                    <div class="learn-icon">
+                        AI
+                    </div>
+
+                    <h3>
+                        AI Agent for Sales & Service
+                    </h3>
+
+                    <p>
+                        See how AI Agents can handle repetitive customer
+                        interactions, answer questions and support your sales
+                        and service process.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+            <div style=" margin-inline: auto; text-align: center; margin-top: 30px;">
+                <a href=" #register" class="btn"> RESERVE MY SEAT → </a>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     TRANSFORMATION
+===================================================== -->
+
+    <section class="section transformation">
+
+        <div class="container-fluid">
+
+            <div class="section-head">
+
+                <div class="section-kicker">
+                    THE TRANSFORMATION
+                </div>
+
+                <h2>
+                    From Manual Work to Business Systems.
+                </h2>
+
+            </div>
+
+
+            <div class="transform-grid">
+
+                <div class="transform-box before">
+
+                    <h3>
+                        BEFORE
+                    </h3>
+
+                    <ul class="transform-list">
+
+                        <li>Manual lead follow-up</li>
+
+                        <li>Scattered processes</li>
+
+                        <li>Repetitive tasks</li>
+
+                        <li>Missed opportunities</li>
+
+                        <li>Owner dependency</li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="transform-arrow">
+                    →
+                </div>
+
+
+                <div class="transform-box after">
+
+                    <h3>
+                        SYSTEMIZED
+                    </h3>
+
+                    <ul class="transform-list">
+
+                        <li>Automated lead capture</li>
+
+                        <li>Systematic follow-up</li>
+
+                        <li>Structured sales process</li>
+
+                        <li>Customer retention systems</li>
+
+                        <li>AI-assisted operations</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div style=" margin-inline: auto; text-align: center; margin-top: 30px;">
+                <a href=" #register" class="btn"> RESERVE MY SEAT → </a>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     BONUS
+===================================================== -->
+
+    <section class="section bonus" id="bonus">
+
+        <div class="container-fluid">
+
+            <div class="section-head">
+
+                <div class="section-kicker">
+                    BONUS VAULT
+                </div>
+
+                <h2>
+                    10 Powerful Gifts for Business Owners.
+                </h2>
+
+                <p>
+                    Your Masterclass registration includes these practical
+                    business growth resources.
+                </p>
+
+            </div>
+
+
+            <div class="bonus-grid">
+
+
+                <div class="bonus-card">
+
+                    <div class="bonus-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Complete AI Prompt Library
+                        </h3>
+
+                        <p>
+                            Ready-to-use AI prompts for business, marketing, sales
+                            and productivity.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="bonus-card">
+
+                    <div class="bonus-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            1-Page Business Plan
+                        </h3>
+
+                        <p>
+                            Create a simple, clear roadmap for your business.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="bonus-card">
+
+                    <div class="bonus-number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            100-Day Social Media Plan
+                        </h3>
+
+                        <p>
+                            Get a structured content roadmap to stay consistent.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="bonus-card">
+
+                    <div class="bonus-number">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            ₹1 Crore Business Growth Plan
+                        </h3>
+
+                        <p>
+                            A strategic framework to map your growth goals and action steps.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="bonus-card">
+
+                    <div class="bonus-number">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            WhatsApp Flow Automation
+                        </h3>
+
+                        <p>
+                            Learn how to structure automated WhatsApp conversations.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="bonus-card">
+
+                    <div class="bonus-number">
+                        06
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Sales & Marketing Process
+                        </h3>
+
+                        <p>
+                            Build a systematic process for generating and converting leads.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="bonus-card">
+
+                    <div class="bonus-number">
+                        07
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Complete Business Growth Audit
+                        </h3>
+
+                        <p>
+                            Identify gaps in marketing, sales, follow-up and systems.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="bonus-card">
+
+                    <div class="bonus-number">
+                        08
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Monthly Execution Plan
+                        </h3>
+
+                        <p>
+                            Know which activities to focus on every month.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="bonus-card">
+
+                    <div class="bonus-number">
+                        09
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            1 Week Live Implementation Sessions
+                        </h3>
+
+                        <p>
+                            Get live implementation support to put your learning into action.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="bonus-card">
+
+                    <div class="bonus-number">
+                        10
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Complete Training Video Library
+                        </h3>
+
+                        <p>
+                            Revisit the concepts and implement them step by step.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div>
+
+            <div style=" margin-inline: auto; text-align: center; margin-top: 30px;">
+                <a href=" #register" class="btn"> RESERVE MY SEAT → </a>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     AUDIENCE
+===================================================== -->
+
+    <section class="section audience" id="audience">
+
+        <div class="container-fluid">
+
+            <div class="section-head">
+
+                <div class="section-kicker">
+                    WHO IS THIS FOR?
+                </div>
+
+                <h2>
+                    This Masterclass Is Only for Business Owners.
+                </h2>
+
+                <p>
+                    Built for entrepreneurs and business professionals who want
+                    to introduce more systematic processes into their business.
+                </p>
+
+            </div>
+
+
+            <div class="audience-grid">
+
+                <div class="audience-pill">
+                    Small Business Owners
+                </div>
+
+                <div class="audience-pill">
+                    Service Business Owners
+                </div>
+
+                <div class="audience-pill">
+                    Coaches & Trainers
+                </div>
+
+                <div class="audience-pill">
+                    Consultants
+                </div>
+
+                <div class="audience-pill">
+                    Agency Owners
+                </div>
+
+                <div class="audience-pill">
+                    Real Estate Business Owners
+                </div>
+
+                <div class="audience-pill">
+                    Insurance & Financial Advisors
+                </div>
+
+                <div class="audience-pill">
+                    Education & Training Institutes
+                </div>
+
+                <div class="audience-pill">
+                    Healthcare & Wellness Businesses
+                </div>
+
+                <div class="audience-pill">
+                    Local Business Owners
+                </div>
+
+                <div class="audience-pill">
+                    Entrepreneurs Looking to Scale
+                </div>
+
+            </div>
+
+            <div style=" margin-inline: auto; text-align: center; margin-top: 30px;">
+                <a href=" #register" class="btn"> RESERVE MY SEAT → </a>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     NO CODE
+===================================================== -->
+
+    <section class="section">
+
+        <div class="container-fluid">
+
+            <div class="section-head">
+
+                <div class="section-kicker">
+                    NO TECHNICAL BARRIER
+                </div>
+
+                <h2>
+                    You Don't Need to Be a Tech Expert.
+                </h2>
+
+            </div>
+
+
+            <div class="no-code-grid">
+
+                <div class="no-code-card">
+
+                    <div class="no-code-icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        No Coding Required.
+                    </h3>
+
+                </div>
+
+
+                <div class="no-code-card">
+
+                    <div class="no-code-icon">
+                        🧠
+                    </div>
+
+                    <h3>
+                        No Technical Skills Needed.
+                    </h3>
+
+                </div>
+
+
+                <div class="no-code-card">
+
+                    <div class="no-code-icon">
+                        🚀
+                    </div>
+
+                    <h3>
+                        Anyone Can Do It.
+                    </h3>
+
+                </div>
+
+            </div>
+
+            <div style=" margin-inline: auto; text-align: center; margin-top: 30px;">
+                <a href=" #register" class="btn"> RESERVE MY SEAT → </a>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     REGISTER
+===================================================== -->
+
+    <section class="register" id="register">
+
+        <div class="container-fluid register-grid">
+
+
+            <div class="register-copy">
+
+                <div class="section-kicker">
+                    RESERVE YOUR SEAT
+                </div>
+
+                <h2>
+                    Your Business Doesn't Need More
+                    <span>Manual Work.</span>
+                </h2>
+
+                <p>
+                    It needs better systems. Learn how AI and automation can
+                    help you build a more systematic approach to lead generation,
+                    sales, customer service and business operations.
+                </p>
+
+
+                <ul class="register-points">
+
+                    <li>
+                        AI Lead Generation
+                    </li>
+
+                    <li>
+                        Automated Lead Follow-Up
+                    </li>
+
+                    <li>
+                        Sales Conversion Automation
+                    </li>
+
+                    <li>
+                        Customer Retention Systems
+                    </li>
+
+                    <li>
+                        AI Agents for Sales & Service
+                    </li>
+
+                    <li>
+                        10 Business Growth Bonuses
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="form-box">
+
+                <h3>
+                    Reserve Your Seat
+                </h3>
+
+                <p>
+                    Enter your details to register for the Masterclass.
+                </p>
+
+
+                <form>
+
+                    <div class="form-group">
+
+                        <label>
+                            FULL NAME
+                        </label>
+
+                        <input type="text" placeholder="Your Name" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            WHATSAPP NUMBER
+                        </label>
+
+                        <input type="tel" placeholder="+91 XXXXX XXXXX" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            BUSINESS NAME
+                        </label>
+
+                        <input type="text" placeholder="Your Business">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            BUSINESS TYPE
+                        </label>
+
+                        <select>
+
+                            <option value="">
+                                Select Business Type
+                            </option>
+
+                            <option>
+                                Service Business
+                            </option>
+
+                            <option>
+                                Agency
+                            </option>
+
+                            <option>
+                                Consultant
+                            </option>
+
+                            <option>
+                                Coach / Trainer
+                            </option>
+
+                            <option>
+                                Real Estate
+                            </option>
+
+                            <option>
+                                Education
+                            </option>
+
+                            <option>
+                                Healthcare
+                            </option>
+
+                            <option>
+                                Local Business
+                            </option>
+
+                            <option>
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button type="submit" class="form-submit">
+                        RESERVE MY SEAT →
+                    </button>
+
+                    <p class="form-note">
+                        Your information is used only for Masterclass registration.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     FAQ
+===================================================== -->
+
+    <section class="section" id="faq">
+
+        <div class="container-fluid">
+
+            <div class="section-head">
+
+                <div class="section-kicker">
+                    FAQ
+                </div>
+
+                <h2>
+                    Frequently Asked Questions.
+                </h2>
+
+            </div>
+
+
+            <div class="faq">
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        Is this Masterclass suitable for beginners?
+
+                        <span>+</span>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Yes. The Masterclass is designed for business owners and
+                            does not require coding or advanced technical knowledge.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        Do I need technical knowledge?
+
+                        <span>+</span>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            No. The focus is on practical business systems,
+                            automation and AI applications rather than programming.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        Who should attend?
+
+                        <span>+</span>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            The Masterclass is designed specifically for business
+                            owners, entrepreneurs, consultants, coaches, agencies
+                            and other business professionals.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        What will I learn?
+
+                        <span>+</span>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            You will learn about AI lead generation, automated
+                            follow-up, sales conversion automation, customer
+                            retention, owner-dependency reduction and AI Agents
+                            for sales and service.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        What bonuses are included?
+
+                        <span>+</span>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            The Masterclass includes the 10 resources listed in
+                            the Bonus Vault section.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     FINAL CTA
+===================================================== -->
+
+    <section class="final-cta">
+
+        <div class="container-fluid">
+
+            <div class="section-kicker">
+                AI AUTOMATION MASTERCLASS
+            </div>
+
+            <h2>
+                Build Less Manual Work.<br>
+                Build More <span>Systems.</span>
+            </h2>
+
+            <p>
+                Learn practical AI automation strategies designed for
+                business owners.
+            </p>
+
+            <a href="#register" class="btn">
+                RESERVE MY SEAT →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     FOOTER
+===================================================== -->
+
+    <footer class="footer">
+
+        <div class="container-fluid">
+
+            © 2026 AI Automation Masterclass. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        /* =====================================================
+           FAQ
+        ===================================================== */
+
+        const faqItems =
+            document.querySelectorAll(".faq-item");
+
+        faqItems.forEach(item => {
+
+            const button =
+                item.querySelector(".faq-question");
+
+            button.addEventListener("click", () => {
+
+                faqItems.forEach(other => {
+
+                    if (other !== item) {
+                        other.classList.remove("active");
+                    }
+
+                });
+
+                item.classList.toggle("active");
+
+            });
+
+        });
+
+
+        /* =====================================================
+           FORM DEMO
+        ===================================================== */
+
+        const masterclassForm = document.querySelector("form");
+
+        if (masterclassForm) masterclassForm.addEventListener("submit", function (e) {
+
+            e.preventDefault();
+
+            alert(
+                "Thank you! Your Masterclass registration has been received."
+            );
+
+        });
+
+    </script>
+
+</body>
+
+</html>

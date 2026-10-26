@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Business Automation Masterclass</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    color:#17120e;
+    background:#fff;
+    line-height:1.6;
+}
+.container{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
+}
+h1,h2,h3{
+    line-height:1.2;
+}
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    background:#ff7900;
+    color:#fff;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:700;
+    border:0;
+    cursor:pointer;
+}
+.btn:hover{background:#e96d00}
+
+/* HEADER */
+header{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    padding:22px 0;
+    z-index:10;
+}
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.logo{
+    color:#fff;
+    font-size:21px;
+    font-weight:800;
+}
+.logo span{color:#ff7900}
+nav{
+    display:flex;
+    gap:25px;
+}
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+}
+nav a:hover{color:#ff7900}
+
+/* HERO */
+.hero{
+    min-height:750px;
+    display:flex;
+    align-items:center;
+    padding:130px 0 80px;
+    color:#fff;
+    background:
+    radial-gradient(circle at 85% 20%,rgba(255,121,0,.35),transparent 28%),
+    linear-gradient(135deg,#090705,#20140b,#090705);
+}
+.hero-content{
+    max-width:780px;
+}
+.badge{
+    display:inline-block;
+    padding:8px 15px;
+    border:1px solid rgba(255,121,0,.6);
+    border-radius:30px;
+    color:#ffad5b;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1px;
+    margin-bottom:20px;
+}
+.hero h1{
+    font-size:clamp(42px,6vw,70px);
+    margin-bottom:22px;
+}
+.hero h1 span{color:#ff7900}
+.hero p{
+    color:#c9c1ba;
+    font-size:18px;
+    max-width:700px;
+    margin-bottom:28px;
+}
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+.btn-outline{
+    background:transparent;
+    border:1px solid rgba(255,255,255,.3);
+}
+
+/* SECTIONS */
+section{
+    padding:85px 0;
+}
+.section-title{
+    text-align:center;
+    max-width:800px;
+    margin:0 auto 45px;
+}
+.section-title .small-title{
+    color:#ff7900;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+.section-title h2{
+    font-size:clamp(32px,4vw,48px);
+    margin-bottom:15px;
+}
+.section-title p{
+    color:#70675f;
+}
+
+/* FOUNDATIONS */
+.foundation-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+.card{
+    padding:25px;
+    border:1px solid #eadfd3;
+    border-radius:12px;
+    background:#fff;
+}
+.card-number{
+    color:#ff7900;
+    font-weight:800;
+    font-size:13px;
+    margin-bottom:15px;
+}
+.card h3{
+    font-size:17px;
+}
+
+/* PROBLEMS */
+.light{
+    background:#fffaf3;
+}
+.problem-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+.problem{
+    background:#fff;
+    border:1px solid #eadfd3;
+    border-radius:10px;
+    padding:20px;
+}
+.problem strong{
+    color:#ff7900;
+}
+
+/* BONUSES */
+.bonus-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+}
+.bonus{
+    display:flex;
+    gap:14px;
+    padding:22px;
+    border:1px solid #eadfd3;
+    border-radius:12px;
+    background:#fff;
+}
+.bonus-icon{
+    font-size:25px;
+}
+.bonus h3{
+    font-size:16px;
+    margin-bottom:6px;
+}
+.bonus p{
+    color:#70675f;
+    font-size:14px;
+}
+
+/* AUDIENCE */
+.audience-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+}
+.audience{
+    padding:18px;
+    background:#fff;
+    border:1px solid #eadfd3;
+    border-radius:10px;
+    font-weight:600;
+}
+.audience span{
+    color:#ff7900;
+}
+
+/* NO CODE */
+.no-code{
+    text-align:center;
+    color:#fff;
+    background:linear-gradient(135deg,#17100a,#2a1708);
+}
+.no-code h2{
+    font-size:clamp(32px,4vw,48px);
+    margin:12px auto 18px;
+}
+.no-code p{
+    max-width:750px;
+    margin:0 auto 25px;
+    color:#cfc4ba;
+}
+.points{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
+.points span{
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:30px;
+    padding:9px 15px;
+    font-size:12px;
+}
+
+/* CTA */
+.cta{
+    text-align:center;
+    background:#fff7ed;
+}
+.cta h2{
+    font-size:clamp(32px,4vw,48px);
+    margin:12px 0 15px;
+}
+.cta p{
+    color:#70675f;
+    margin-bottom:25px;
+}
+
+/* FOOTER */
+footer{
+    padding:30px 0;
+    background:#0d0a08;
+    color:#888;
+    text-align:center;
+    font-size:13px;
+}
+footer strong{color:#ff7900}
+
+/* MOBILE */
+@media(max-width:900px){
+    nav{display:none}
+    .foundation-grid{grid-template-columns:repeat(2,1fr)}
+    .audience-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:650px){
+    section{padding:65px 0}
+    .container{width:92%}
+    .hero{
+        min-height:auto;
+        padding:120px 0 70px;
+    }
+    .hero h1{font-size:40px}
+    .hero p{font-size:15px}
+    .hero-buttons{
+        flex-direction:column;
+    }
+    .hero-buttons .btn{
+        width:100%;
+        text-align:center;
+    }
+    .foundation-grid,
+    .problem-grid,
+    .bonus-grid,
+    .audience-grid{
+        grid-template-columns:1fr;
+    }
+}
+@media(max-width:380px){
+    .hero h1{font-size:34px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container navbar">
+    <div class="logo">AI <span>BUSINESS AUTOMATION</span></div>
+
+    <nav>
+        <a href="#foundations">Foundations</a>
+        <a href="#problems">Automation</a>
+        <a href="#bonuses">Bonuses</a>
+        <a href="#audience">Who It's For</a>
+    </nav>
+
+    <a href="#register" class="btn">RESERVE MY SEAT</a>
+</div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+<div class="container">
+    <div class="hero-content">
+
+        <div class="badge">
+            AI BUSINESS AUTOMATION • MASTERCLASS
+        </div>
+
+        <h1>
+            AI से अपना <span>Business Automate</span> करना सीखें!
+        </h1>
+
+        <p>
+            AI की मदद से अपने Business का 90% तक काम Automate करना सीखें।
+            Manually Business चलाना बंद करें।
+            ऐसा Business बनाएं जो Systems और AI के साथ खुद चले।
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#register" class="btn">
+                RESERVE MY SEAT →
+            </a>
+
+            <a href="#foundations" class="btn btn-outline">
+                WHAT YOU'LL LEARN
+            </a>
+        </div>
+
+    </div>
+</div>
+</section>
+
+
+<!-- FOUNDATIONS -->
+<section id="foundations">
+<div class="container">
+
+<div class="section-title">
+    <div class="small-title">WHAT YOU'LL LEARN</div>
+    <h2>Learn the 8 Core Foundations of Business</h2>
+    <p>
+        AI Automation के साथ अपने Business को Systemize,
+        Automate और Grow करना सीखें।
+    </p>
+</div>
+
+<div class="foundation-grid">
+
+<div class="card">
+    <div class="card-number">01</div>
+    <h3>Right Business Strategy</h3>
+</div>
+
+<div class="card">
+    <div class="card-number">02</div>
+    <h3>Lead Generation System</h3>
+</div>
+
+<div class="card">
+    <div class="card-number">03</div>
+    <h3>Sales Conversion System</h3>
+</div>
+
+<div class="card">
+    <div class="card-number">04</div>
+    <h3>AI & Automation Systems</h3>
+</div>
+
+<div class="card">
+    <div class="card-number">05</div>
+    <h3>Team & Operations</h3>
+</div>
+
+<div class="card">
+    <div class="card-number">06</div>
+    <h3>Finance & Profitability</h3>
+</div>
+
+<div class="card">
+    <div class="card-number">07</div>
+    <h3>Customer Success & Retention</h3>
+</div>
+
+<div class="card">
+    <div class="card-number">08</div>
+    <h3>Long-Term Business Growth</h3>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- PROBLEMS -->
+<section class="light" id="problems">
+<div class="container">
+
+<div class="section-title">
+    <div class="small-title">AI AUTOMATION</div>
+    <h2>AI Automation आपकी कौन-कौन सी Problems Solve करेगा?</h2>
+</div>
+
+<div class="problem-grid">
+
+<div class="problem">
+    ✅ <strong>Lead Generation</strong> – हर दिन नए Leads Generate करें
+</div>
+
+<div class="problem">
+    ✅ <strong>Lead Management</strong> – सभी Leads को एक जगह Manage करें
+</div>
+
+<div class="problem">
+    ✅ <strong>Automated Follow-ups</strong> – Timely Follow-ups Automatically भेजें
+</div>
+
+<div class="problem">
+    ✅ <strong>Sales Conversion</strong> – Interested Leads को पहचानें और Faster Convert करें
+</div>
+
+<div class="problem">
+    ✅ <strong>Customer Retention</strong> – Customers के साथ Automated Engagement बनाए रखें
+</div>
+
+<div class="problem">
+    ✅ <strong>Reduce Owner Dependency</strong> – हर काम के लिए Owner पर Dependency कम करें
+</div>
+
+<div class="problem">
+    ✅ <strong>AI Sales & Support Agents</strong> – 24/7 Customer Queries और Sales Conversations Handle करें
+</div>
+
+<div class="problem">
+    ✅ <strong>Team Management</strong> – Team Tasks और Performance Track करें
+</div>
+
+<div class="problem">
+    ✅ <strong>Social Media Automation</strong> – Content Posting, Scheduling और Basic Engagement Automate करें
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- BONUSES -->
+<section id="bonuses">
+<div class="container">
+
+<div class="section-title">
+    <div class="small-title">10 POWERFUL GIFTS FOR BUSINESS OWNERS</div>
+    <h2>Masterclass Attend करें और पाएं 10 Valuable Resources FREE</h2>
+</div>
+
+<div class="bonus-grid">
+
+<div class="bonus">
+    <div class="bonus-icon">🎁</div>
+    <div>
+        <h3>BONUS #1 — Complete AI Prompt Library</h3>
+        <p>Business, Marketing, Sales और Productivity के Ready-to-Use Prompts.</p>
+    </div>
+</div>
+
+<div class="bonus">
+    <div class="bonus-icon">🎁</div>
+    <div>
+        <h3>BONUS #2 — 1-Page Business Plan</h3>
+        <p>अपने Business के लिए Simple और Clear Roadmap.</p>
+    </div>
+</div>
+
+<div class="bonus">
+    <div class="bonus-icon">🎁</div>
+    <div>
+        <h3>BONUS #3 — 100-Day Social Media Plan</h3>
+        <p>100 Days का Ready Content Roadmap.</p>
+    </div>
+</div>
+
+<div class="bonus">
+    <div class="bonus-icon">🎁</div>
+    <div>
+        <h3>BONUS #4 — ₹1 CRORE Business Growth Plan</h3>
+        <p>Growth Goals और Action Steps का Strategic Framework.</p>
+    </div>
+</div>
+
+<div class="bonus">
+    <div class="bonus-icon">🎁</div>
+    <div>
+        <h3>BONUS #5 — WhatsApp Flow Automation</h3>
+        <p>Business के लिए Automated WhatsApp Conversations बनाना सीखें.</p>
+    </div>
+</div>
+
+<div class="bonus">
+    <div class="bonus-icon">🎁</div>
+    <div>
+        <h3>BONUS #6 — Sales & Marketing Process</h3>
+        <p>Leads Generate, Nurture और Convert करने का System.</p>
+    </div>
+</div>
+
+<div class="bonus">
+    <div class="bonus-icon">🎁</div>
+    <div>
+        <h3>BONUS #7 — Complete Business Growth Audit</h3>
+        <p>Marketing, Sales, Follow-up और Systems की Gaps पहचानें.</p>
+    </div>
+</div>
+
+<div class="bonus">
+    <div class="bonus-icon">🎁</div>
+    <div>
+        <h3>BONUS #8 — Monthly Execution Plan</h3>
+        <p>हर महीने क्या करना है, उसका Clear Action Plan.</p>
+    </div>
+</div>
+
+<div class="bonus">
+    <div class="bonus-icon">🎁</div>
+    <div>
+        <h3>BONUS #9 — 1-Week Live Implementation Sessions</h3>
+        <p>Live Support के साथ जो सीखें उसे Implement करें.</p>
+    </div>
+</div>
+
+<div class="bonus">
+    <div class="bonus-icon">🎁</div>
+    <div>
+        <h3>BONUS #10 — Complete Training Video Library</h3>
+        <p>Step-by-Step Training Videos को कभी भी दोबारा देखें.</p>
+    </div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- AUDIENCE -->
+<section class="light" id="audience">
+<div class="container">
+
+<div class="section-title">
+    <div class="small-title">WHO IS THIS MASTERCLASS FOR?</div>
+    <h2>यह Masterclass ONLY Business Owners के लिए है।</h2>
+    <p>Perfect For:</p>
+</div>
+
+<div class="audience-grid">
+
+<div class="audience"><span>✓</span> Small Business Owners</div>
+<div class="audience"><span>✓</span> Service Business Owners</div>
+<div class="audience"><span>✓</span> Coaches & Trainers</div>
+<div class="audience"><span>✓</span> Consultants</div>
+<div class="audience"><span>✓</span> Agency Owners</div>
+<div class="audience"><span>✓</span> Real Estate Business Owners</div>
+<div class="audience"><span>✓</span> Insurance & Financial Advisors</div>
+<div class="audience"><span>✓</span> Education & Training Institutes</div>
+<div class="audience"><span>✓</span> Healthcare & Wellness Businesses</div>
+<div class="audience"><span>✓</span> Local Business Owners</div>
+<div class="audience"><span>✓</span> Entrepreneurs Looking to Scale</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- NO CODING -->
+<section class="no-code">
+<div class="container">
+
+<div class="small-title">
+    NO CODING. NO TECHNICAL SKILLS.
+</div>
+
+<h2>
+    No Coding Required.
+    No Technical Skills Needed.
+</h2>
+
+<p>
+    Anyone Can Do It.
+    Business AI सीखें →
+    Business Automate करें →
+    8 Core Foundations समझें →
+    Problems Solve करें →
+    10 Powerful Bonuses पाएं →
+    Business Scale करें
+</p>
+
+<div class="points">
+    <span>NO CODING</span>
+    <span>NO TECHNICAL SKILLS</span>
+    <span>BUSINESS FOCUSED</span>
+    <span>AI + SYSTEMS</span>
+</div>
+
+</div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta" id="register">
+<div class="container">
+
+<div class="small-title">
+    READY TO AUTOMATE YOUR BUSINESS?
+</div>
+
+<h2>
+    Learn AI. Build Systems.
+    Automate Your Business. Scale Faster.
+</h2>
+
+<p>
+    Start your journey toward a more automated and systemized business.
+</p>
+
+<a href="#" class="btn">
+    RESERVE MY SEAT →
+</a>
+
+</div>
+</section>
+
+
+<footer>
+<div class="container">
+    © 2026 AI Business Automation Masterclass
+    •
+    <strong>aibusiness.praashantchoursia.com</strong>
+</div>
+</footer>
+
+</body>
+</html>
